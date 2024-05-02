@@ -29,13 +29,19 @@
         }
     },
     "require"          : {
-        "php" : ">=7.4"
+        "php" : ">=8.3"
     },
     "require-dev"      : {
         "primate/router"    : "dev-master",
         "primate/container" : "dev-master"
     },
     "minimum-stability": "dev",
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S 127.0.0.1:8000 -t public"
+        ]
+    },
     "config"           : {
         "optimize-autoloader": true,
         "prefer-stable"      : true

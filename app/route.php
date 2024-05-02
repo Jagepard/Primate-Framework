@@ -10,4 +10,8 @@ $router->addRoute("/", function () {
     echo "Closure";
 });
 
+$router->addRoute("/hello/:name", function ($name = 'world') {
+    echo "hello $name";
+});
+
 $router->matchRoute($requestUri);
